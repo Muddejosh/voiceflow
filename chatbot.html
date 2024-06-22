@@ -15,9 +15,10 @@
         }
 
         #chat-container {
-            width: 100%;
-            max-width: 500px;
-            height: 600px;
+            width: 90%;
+            max-width: 1000px;
+            height: 90vh;
+            max-height: 100%;
             border: 2px solid #4CAF50;
             border-radius: 10px;
             overflow: hidden;
@@ -31,12 +32,14 @@
         .vfrc--avatar img {
             content: url('https://via.placeholder.com/150'); /* Replace with your custom image URL */
         }
+
         .vfrc-footer--watermark {
             display: none !important;
         }
+
         .c-kIbiaN-icyFRzP-css {
-    background-image: url('https://via.placeholder.com/150');
-}
+            background-image: url('https://via.placeholder.com/150'); /* Replace with your custom image URL */
+        }
     </style>
 </head>
 <body>
@@ -65,19 +68,18 @@
             }
             v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
         })(document, 'script');
-      // Wait for the document to fully load
-document.addEventListener('DOMContentLoaded', function() {
-    // Select all elements with class vfrc-assistant-info
-    var assistantInfos = document.getElementsByClassName('vfrc-assistant-info');
 
-    // Loop through the selected elements (if any)
-    for (var i = 0; i < assistantInfos.length; i++) {
-        // Remove each element
-        assistantInfos[i].parentNode.removeChild(assistantInfos[i]);
-    }
-});
+        // Wait for the document to fully load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all elements with class vfrc-assistant-info
+            var assistantInfos = document.getElementsByClassName('vfrc-assistant-info');
 
-
+            // Loop through the selected elements (if any)
+            for (var i = 0; i < assistantInfos.length; i++) {
+                // Remove each element
+                assistantInfos[i].parentNode.removeChild(assistantInfos[i]);
+            }
+        });
     </script>
 </body>
 </html>
