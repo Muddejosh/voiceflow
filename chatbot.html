@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Voiceflow Chatbot</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #chat-container {
+            width: 100%;
+            max-width: 500px;
+            height: 600px;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .vfrc--header {
+            background-color: #4CAF50 !important;
+        }
+
+        .vfrc--avatar img {
+            content: url('https://via.placeholder.com/150'); /* Replace with your custom image URL */
+        }
+        .vfrc-footer--watermark {
+            display: none !important;
+        }
+        .c-kIbiaN-icyFRzP-css {
+    background-image: url('https://via.placeholder.com/150');
+}
+    </style>
+</head>
+<body>
+    <div id="chat-container"></div>
+
+    <script type="text/javascript">
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+                window.voiceflow.chat.load({
+                    verify: { projectID: '66689b31b417497aa7cc08f2' },
+                    url: 'https://general-runtime.voiceflow.com',
+                    versionID: 'production',
+                    render: {
+                        mode: 'embedded',
+                        target: document.getElementById('chat-container')
+                    },
+                    assistant: {
+                        title: "Medical Chatbot",
+                        description: "How can I help you today?",
+                        image: "https://via.placeholder.com/150", // Replace with your custom image URL
+                        color: "#4CAF50"
+                    },
+                    autostart: true
+                });
+            }
+            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+      // Wait for the document to fully load
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all elements with class vfrc-assistant-info
+    var assistantInfos = document.getElementsByClassName('vfrc-assistant-info');
+
+    // Loop through the selected elements (if any)
+    for (var i = 0; i < assistantInfos.length; i++) {
+        // Remove each element
+        assistantInfos[i].parentNode.removeChild(assistantInfos[i]);
+    }
+});
+
+
+    </script>
+</body>
+</html>
