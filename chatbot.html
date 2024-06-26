@@ -7,11 +7,16 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             background-color: #000000; /* Changed to black */
+        }
+
+        #logo {
+            margin-bottom: 20px;
         }
 
         #chat-container {
@@ -43,6 +48,7 @@
     </style>
 </head>
 <body>
+    <img id="logo" src="./login.png" alt="Logo" width="200px"> <!-- Replace with your logo URL -->
     <div id="chat-container"></div>
 
     <script type="text/javascript">
